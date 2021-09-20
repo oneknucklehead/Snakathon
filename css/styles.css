@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.body {
+  background: rgb(110, 3, 110);
+  min-height: 100vh;
+  /* background-size: 100vw 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+#board {
+  border: 4px dashed rgb(255, 255, 255);
+  background: linear-gradient(black, purple);
+  width: 90vmin;
+  height: 92vmin;
+  display: grid;
+  grid-template-rows: repeat(30, 1fr);
+  grid-template-columns: repeat(30, 1fr);
+}
+.scoreBox {
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  width: 15vmin;
+  height: 10vmin;
+  margin: 0 100px 0 0;
+  padding: 20px;
+  font-size: 20px;
+}
+.scoreContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+.hiScoreContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#displayScore {
+  left: 100px;
+}
+#displayHiScore {
+  top: 250px;
+  left: 100px;
+}
+.head {
+  background-color: rgb(42, 82, 15);
+  border-radius: 20%;
+  transform: scale(1.2);
+}
+
+.snake {
+  background-color: rgb(74, 141, 29);
+  border: 2px solid green;
+  border-radius: 5%;
+}
+.tail {
+  background-color: rgb(77, 180, 7);
+  transform: scale(0.5);
+  border-radius: 50%;
+}
+.food {
+  background-image: url('/images/orange-juice.png');
+  background-size: cover;
+  animation: scale 0.5s ease-in-out infinite alternate;
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
